@@ -49,7 +49,8 @@ let dataPoints = [];
 //     }
 // ]
 
-function graph1(props) {
+
+const Graphs = (props) => {
     const options = {
         title: {
             text: "Basic Column Chart in React"
@@ -66,16 +67,7 @@ function graph1(props) {
         }]
     }
 
-    return (
-        <div>
-            <CanvasJSChart options={options}
-            /* onRef = {ref => this.chart = ref} */
-            />
-        </div>
-    );
-}
-function graph2(props) {
-    const options = {
+    const options2 = {
         title: {
             text: "Basic Column Chart in React"
         },
@@ -90,42 +82,7 @@ function graph2(props) {
             ]
         }]
     }
-
-    return (
-        <div>
-            <CanvasJSChart options={options}
-            /* onRef = {ref => this.chart = ref} */
-            />
-        </div>
-    );
-}
-function graph3(props) {
-    const options = {
-        title: {
-            text: "Basic Column Chart in React"
-        },
-        data: [{
-            type: "column",
-            dataPoints: [
-                { label: "no link", y: 10 },
-                { label: "i wish this worked", y: 15 },
-                { label: "scik", y: 25 },
-                { label: "ifwo", y: 30 },
-                { label: "asdfasd", y: 28 }
-            ]
-        }]
-    }
-
-    return (
-        <div>
-            <CanvasJSChart options={options}
-            /* onRef = {ref => this.chart = ref} */
-            />
-        </div>
-    );
-}
-function graph4(props) {
-    const options = {
+    const options3 = {
         title: {
             text: "Basic Column Chart in React"
         },
@@ -140,83 +97,62 @@ function graph4(props) {
             ]
         }]
     }
+    const options4 = {
+        title: {
+            text: "Basic Column Chart in React"
+        },
+        data: [{
+            type: "column",
+            dataPoints: [
+                { label: "no link", y: 10 },
+                { label: "i wish this worked", y: 15 },
+                { label: "scik", y: 25 },
+                { label: "ifwo", y: 30 },
+                { label: "asdfasd", y: 28 }
+            ]
+        }]
+    }
+    const graph1 = () => {
+        return (
+            <div>
+                <CanvasJSChart options={this.options1} />
+            </div>
+        );
 
-    return (
-        <div>
-            <CanvasJSChart options={options}
-            /* onRef = {ref => this.chart = ref} */
-            />
-        </div>
-    );
+    }
+
+    const graph2 = () => {
+        return (
+            <div>
+                <CanvasJSChart options={options2} />
+            </div>
+        );
+
+    }
+
+    const graph3 = () => {
+        return (
+            <div>
+                <CanvasJSChart options={options3} />
+            </div>
+        );
+
+    }
+
+    const graph4 = () => {
+        return (
+            <div>
+                <CanvasJSChart options={options4} />
+            </div>
+        );
+
+    }
+
+    const a = 10;
+
+
 }
-const Graphs = (props) => {
 
-    return ({
-        var a = 10;
-
-        if(a === 16) {
-        return ({
-            graph1,
-            graph2,
-            graph3,
-            graph4
-        });
-
-    }
-    if (a === 15) {
-
-    }
-    if (a === 14) {
-
-    }
-    if (a === 13) {
-
-    }
-    if (a === 12) {
-
-    }
-    if (a === 11) {
-
-    }
-    if (a === 10) {
-        return ({
-            graph1(props)
-                graph3(props)
-        });
-    }
-    if (a === 9) {
-
-    }
-    if (a === 8) {
-
-    }
-    if (a === 7) {
-
-    }
-    if (a === 6) {
-
-    }
-    if (a === 5) {
-
-    }
-    if (a === 4) {
-
-    }
-    if (a === 3) {
-
-    }
-    if (a === 2) {
-
-    }
-    if (a === 1) {
-
-    }
-
-
-});
-
-    }
-}
 
 export default Graphs;
 // gradeVStudentPS() {
