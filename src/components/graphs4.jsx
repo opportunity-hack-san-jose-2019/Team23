@@ -6,7 +6,7 @@ import CanvasJSReact from './canvasjs.react';
 //var CanvasJSReact = require('./canvasjs.react');
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-let dataPoints = [];
+let datapoints = [];
 
 
 class Graphs4 extends Component {
@@ -26,14 +26,37 @@ class Graphs4 extends Component {
                 title: "Average Grade"
             },
             data: [{
-                type: "line",
-
+                type: "spline",
+                visible: true,
+                name: "Classroom 1",
                 dataPoints: [
                     { label: 1, y: 90 },
                     { label: 2, y: 85 },
                     { label: 3, y: 85 },
                     { label: 4, y: 90 },
                     { label: 5, y: 85 }
+                ]
+            }, {
+                type: "spline",
+                visible: true,
+                name: "Classroom 2",
+                dataPoints: [
+                    { label: 1, y: 28 },
+                    { label: 2, y: 30 },
+                    { label: 3, y: 25 },
+                    { label: 4, y: 15 },
+                    { label: 5, y: 10 }
+                ]
+            }, {
+                type: "spline",
+                visible: true,
+                name: "Classroom 3",
+                dataPoints: [
+                    { label: 1, y: 40 },
+                    { label: 2, y: 41 },
+                    { label: 3, y: 39 },
+                    { label: 4, y: 45 },
+                    { label: 5, y: 50 }
                 ]
             }]
         }
