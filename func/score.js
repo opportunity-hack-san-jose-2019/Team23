@@ -14,10 +14,34 @@ module.exports = {
      */
     execute: function execute(auth, course, student){
         const classroom = google.classroom({version: 'v1', auth});
-        var allsubs = classroom.courses.courseWork.studentSubmissions.list(
-            {courseId: course},
-            {courseWorkId: student}
-        );
-        console.log(util.inspect(allsubs))
+        const allAssignments = classroom.courses.courseWork.list(
+            {courseId:course}
+        ); 
+        var assignarr = [] //all assignment IDs
+        Promise.all([allAssignments])
+        .then(function(result){
+            var sub = stuff.map ( (element) =>  classroom.courses.courseWork.studentSubmissions.list(
+                {courseId: course, courseWorkId: element.id}));
+Promise.all([sub])
+            .then(function(result){
+                subs.push(result.data);
+                console.log(result[0].data.studentSubmissions[1].assignedGrade);
+            });
+            
+        })
+        
+
+        // const allSubmissions = classroom.courses.courseWork.studentSubmissions.list(
+        //     {courseId: course ,courseWorkId: assignarr}
+        // )
+        //get all the assignments
+        //you wanna return the students grades
+        //get all of a students assignments
+        //allstud = all student submissions
+        //then get grades for each submission and put it in a json file
+        // Promise.all([allStud])
+        // .then(function(result){ // pull all submissions into result
+        //     console.log(result)
+        // })
     }
 }

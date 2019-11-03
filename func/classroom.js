@@ -16,8 +16,9 @@ module.exports = {
         const courseinfo = classroom.courses.get({id:course})
             .then(function(result){
                 console.log("Classroom: ");
-                console.log(result.data.name);
-                return result.data.name;
+                console.log(JSON.stringify({"classroom":result.data.name}));
+                console.log(util.inspect(result.data))
+                return JSON.stringify({"classroom":result.data.name});
             });
         
     }

@@ -13,12 +13,20 @@ module.exports = {
      */
     execute: function execute(auth, course){
         const classroom = google.classroom({version: 'v1', auth});
-        const courseinfo = classroom.courses.students.list({courseId:course})
+        const stud = classroom.courses.students.list({courseId:course})
             .then(function(result){
                 console.log("Students")
-                console.log(result.data)
-                return result.data;
-            });
+                allStudents = result.data.students
+                allData = []
+                allStudents.forEach(element => {
+                    element = element.profile.name.fullName
+                    // element = element.profile.id
+                    allData.push(element)
+                });
+                console.log(JSON.stringify({"students": allData}))
+                return JSON.stringify({"students": allData});
+            }
+        );
         
     }
 }

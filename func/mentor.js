@@ -1,5 +1,4 @@
 const {google} = require('googleapis');
-const util = require('util');
 
 module.exports = {
     name: "classroom",
@@ -13,11 +12,17 @@ module.exports = {
      */
     execute: function execute(auth, course){
         const classroom = google.classroom({version: 'v1', auth});
-        const courseinfo = classroom.courses.teachers.list({courseId:course})
+        const teachers = classroom.courses.teachers.list({courseId:course})
             .then(function(result){
                 console.log("Teacher: ")
-                console.log(result.data.teachers)
-                return result.data.teachers;
+                allTeachers = result.data.teachers;
+                allData = [];
+                allTeachers.forEach(element => {
+                    element = element.profile.name.fullName;
+                    allData.push(element);
+                });
+                console.log(JSON.stringify({"teachers": allData}))
+                return JSON.stringify({"teachers": allData});
             });
         
     }
