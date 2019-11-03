@@ -52,15 +52,62 @@ const MyForm = (props) => {
                     }
                 ]
 
+            },
+            {
+                id: 12312,
+                myClassName: "the second class mane",
+                mentor: "Joe Mentor",
+                students: [
+                    {
+                        student: "Billy Bob",
+                        averageGrade: "94",
+                        assignments: [
+                            {
+                                assignmentName: "homework 1",
+                                assignmentGrade: 94
+
+                            }
+                        ]
+                    },
+                    {
+                        student: "Billy Bob Joe",
+                        averageGrade: "50",
+                        assignments: [
+                            {
+                                assignmentName: "homework 1",
+                                assignmentGrade: 50
+
+                            }
+                        ]
+                    },
+                    {
+                        student: "John Bob Joe",
+                        averageGrade: "120",
+                        assignments: [
+                            {
+                                assignmentName: "homework 1",
+                                assignmentGrade: 120
+
+                            }
+                        ]
+                    }
+                ]
+
             }
+
 
         ]
     }
-    const [fadeIn, setFadeIn] = useState(false);
+    const [fadeIn1, setFadeIn1] = useState(false);
+    const [fadeIn2, setFadeIn2] = useState(false);
+    const [fadeIn3, setFadeIn3] = useState(false);
+    const [fadeIn4, setFadeIn4] = useState(false);
 
-    const toggle = () => setFadeIn(!fadeIn);
+    const toggle1 = () => setFadeIn1(!fadeIn1);
+    const toggle2 = () => setFadeIn2(!fadeIn2);
+    const toggle3 = () => setFadeIn3(!fadeIn3);
+    const toggle4 = () => setFadeIn4(!fadeIn4);
 
-    const values = [0, 0, 0, 0, 0]
 
     const disabled = true;
     return (
@@ -96,34 +143,34 @@ const MyForm = (props) => {
                 <FormGroup className="form-button">
                     <Col>
                         <Row sm={6}>
-                            <CustomInput type="checkbox" id="1" label="grade vs assignments (per student)" />
+                            <CustomInput type="checkbox" id="1" label="grade vs assignments (per student)" onClick={toggle1} />
                         </Row>
                         <Row sm={6}>
-                            <CustomInput type="checkbox" id="2" label="average grade vs assignment (classrooms)" onClick={toggle} />
+                            <CustomInput type="checkbox" id="2" label="average grade vs assignment (classrooms)" onClick={toggle2} />
                         </Row>
                     </Col>
                     <Col>
                         <Row sm={6}>
-                            <CustomInput type="checkbox" id="3" label="average grades vs classes (classrooms)" />
+                            <CustomInput type="checkbox" id="3" label="average grades vs classes (classrooms)" onClick={toggle3} />
                         </Row>
                         <Row sm={6}>
-                            <CustomInput type="checkbox" id="4" label="average grades of all classes" />
+                            <CustomInput type="checkbox" id="4" label="average grades of all classes" onClick={toggle4} />
                         </Row>
                     </Col>
                 </FormGroup>
             </Form>
-            <div>
+            <Fade in={fadeIn1} >
                 <Graphs1 />
-            </div>
-            <div>
+            </Fade>
+            <Fade in={fadeIn2}>
                 <Graphs2 />
-            </div>
-            <div>
+            </Fade>
+            <Fade in={fadeIn3}>
                 <Graphs3 />
-            </div>
-            <div>
+            </Fade>
+            <Fade in={fadeIn4}>
                 <Graphs4 />
-            </div>
+            </Fade>
 
         </div>
     );
