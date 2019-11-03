@@ -49,6 +49,7 @@ const MyForm = (props) => {
                     <Container >
                         <Row className="form-text">
                             <Label for="selectMulti">Choose which classes to display!</Label>
+							<p> Use control + left click to select multiple classes and those will be the classes whose graphs are displayed. </p>
                             <Input type="select" name="selectMulti" id="selectMulti" multiple>
                                 {
                                     state.classroom.map((mclass, index) => {
@@ -62,26 +63,24 @@ const MyForm = (props) => {
                         </Row>
                     </Container>
                 </FormGroup>
-                <FormGroup >
-                    <Row>
-                        <Col sm={6}>
+				<p> Select which graphs you want by checking the checkboxes! </p>
+                <FormGroup className="form-button">
+                    <Col>
+                        <Row sm={6}>
                             <CustomInput type="checkbox" id="1" label="grade vs assignments (per student)" />
-                        </Col>
-                        <Col sm={6}>
+                        </Row>
+                        <Row sm={6}>
                             <CustomInput type="checkbox" id="2" label="average grade vs assignment (classrooms)" onClick={toggle} />
-                        </Col>
-                    </Row>
-                </FormGroup>
-                <FormGroup>
-                    <Row>
-                        <Col sm={6}>
+                        </Row>
+                    </Col>
+                    <Col>
+                        <Row sm={6}>
                             <CustomInput type="checkbox" id="3" label="average grades vs classes (classrooms)" />
-                        </Col>
-                        <Col sm={6}>
+                        </Row>
+                        <Row sm={6}>
                             <CustomInput type="checkbox" id="4" label="average grades of all classes" />
-                        </Col>
-                    </Row>
-
+                        </Row>
+                    </Col>
                 </FormGroup>
             </Form>
 
