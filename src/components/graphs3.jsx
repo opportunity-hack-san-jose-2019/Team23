@@ -23,11 +23,11 @@ class Graphs3 extends Component {
             data: [{
                 type: "column",
                 dataPoints: [
-                    { label: "Class 1", y: 10 },
-                    { label: "Class 2", y: 15 },
-                    { label: "Class 3", y: 25 },
-                    { label: "Class 4", y: 30 },
-                    { label: "Class 5", y: 28 }
+                    { label: "Class 1", y: 90 },
+                    { label: "Class 2", y: 95 },
+                    { label: "Class 3", y: 80 },
+                    { label: "Class 4", y: 75 },
+                    { label: "Class 5", y: 88 }
                 ]
             }]
         }
