@@ -12,26 +12,33 @@ module.exports = {
      */
     execute: function execute(auth, course, student){
         const classroom = google.classroom({version: 'v1', auth});
-        // const works = classroom.courses.courseWork.list(
-        //     {courseId:course},
-        // ).then(function(result){
-        //     console.log(result.data);
-        // })
+        // the works
         const allwork = classroom.courses.courseWork.list(
             {courseId:course}
         )
+        // the student
         const stu = classroom.courses.students.get(
             {courseId:course, userId:student}
         )
-        (allwork && stu).then(function(result){
-            console.log(allwork)
-            console.log(stu)
+        var assigns = [];
+        Promise.all([allwork])
+        .then(function(result){
+            result.forEach(element =>{
+                assigns.push(classroom.courses.courseWork.studentSubmissions.list(
+                    {courseId: course, courseWorkId: element.data}
+                ))
+            })
+            
         })
-        // const assignmentData = classroom.courses.courseWork.get(
-        //     {id: assignment, courseId:course}
-        // ).then(function(result){
-        //     console.log(result.data)
-        // })
+        Promise.all([allwork, stu, assigns])
+        .then(function(result){
+            works = result[0].data.courseWork
+            stud = result[1].data.profile.name.fullName
+            assigns = result[2].data
+            console.log(assigns)
+            console.log(works)
+            console.log(stud)
+        })
         return;
     }
 }

@@ -20,6 +20,7 @@ module.exports = {
                 allData = []
                 allStudents.forEach(element => {
                     element = element.profile.name.fullName
+                    // element = element.profile.id
                     allData.push(element)
                 });
                 console.log(JSON.stringify({"students": allData}))
