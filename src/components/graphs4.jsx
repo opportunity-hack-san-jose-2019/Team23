@@ -2,159 +2,44 @@
 //import { ReactComponent } from '*.svg';
 
 import React, { Component } from 'react';
-import CanvasJSReact from '../canvasjs.react';
+import CanvasJSReact from './canvasjs.react';
 //var CanvasJSReact = require('./canvasjs.react');
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 let dataPoints = [];
 
 
-// classroom: [
-//     {
-//         id: 12312,
-//         myClassName: "Class mane",
-//         mentor: "Joe Mentor",
-//         students: [
-//             {
-//                 student: "Billy Bob",
-//                 averageGrade: "94",
-//                 assignments: [
-//                     {
-//                         assignmentName: "homework 1",
-//                         assignmentGrade: 94
-//                     }
-//                 ]
-//             },
-//             {
-//                 student: "Billy Bob Joe",
-//                 averageGrade: "50",
-//                 assignments: [
-//                     {
-//                         assignmentName: "homework 1",
-//                         assignmentGrade: 50
-//                     }
-//                 ]
-//             },
-//             {
-//                 student: "John Bob Joe",
-//                 averageGrade: "120",
-//                 assignments: [
-//                     {
-//                         assignmentName: "homework 1",
-//                         assignmentGrade: 120
-//                     }
-//                 ]
-//             }
-//         ]
-//     }
-// ]
+class Graphs4 extends Component {
 
 
-const Graphs = (props) => {
-    const options = {
-        title: {
-            text: "Basic Column Chart in React"
-        },
-        data: [{
-            type: "column",
-            dataPoints: [
-                { label: "Apple", y: 10 },
-                { label: "Orange", y: 15 },
-                { label: "Banana", y: 25 },
-                { label: "Mango", y: 30 },
-                { label: "Grape", y: 28 }
-            ]
-        }]
-    }
 
-    const options2 = {
-        title: {
-            text: "Basic Column Chart in React"
-        },
-        data: [{
-            type: "column",
-            dataPoints: [
-                { label: "Chicken", y: 10 },
-                { label: "Alfredo", y: 15 },
-                { label: "Chicken", y: 25 },
-                { label: "Alfredo", y: 30 },
-                { label: "hahah", y: 28 }
-            ]
-        }]
-    }
-    const options3 = {
-        title: {
-            text: "Basic Column Chart in React"
-        },
-        data: [{
-            type: "column",
-            dataPoints: [
-                { label: "mane", y: 10 },
-                { label: "nei thry", y: 15 },
-                { label: "looordie", y: 25 },
-                { label: "yes", y: 30 },
-                { label: "ok", y: 28 }
-            ]
-        }]
-    }
-    const options4 = {
-        title: {
-            text: "Basic Column Chart in React"
-        },
-        data: [{
-            type: "column",
-            dataPoints: [
-                { label: "no link", y: 10 },
-                { label: "i wish this worked", y: 15 },
-                { label: "scik", y: 25 },
-                { label: "ifwo", y: 30 },
-                { label: "asdfasd", y: 28 }
-            ]
-        }]
-    }
-    const graph1 = () => {
+    render() {
+        const options = {
+            title: {
+                text: "Basic Column Chart in React"
+            },
+            data: [{
+                type: "column",
+                dataPoints: [
+                    { label: "mane", y: 10 },
+                    { label: "nei thry", y: 15 },
+                    { label: "looordie", y: 25 },
+                    { label: "yes", y: 30 },
+                    { label: "ok", y: 28 }
+                ]
+            }]
+        }
         return (
             <div>
-                <CanvasJSChart options={this.options1} />
+                <CanvasJSChart options={options}
+                /* onRef = {ref => this.chart = ref} */
+                />
             </div>
         );
-
     }
-
-    const graph2 = () => {
-        return (
-            <div>
-                <CanvasJSChart options={options2} />
-            </div>
-        );
-
-    }
-
-    const graph3 = () => {
-        return (
-            <div>
-                <CanvasJSChart options={options3} />
-            </div>
-        );
-
-    }
-
-    const graph4 = () => {
-        return (
-            <div>
-                <CanvasJSChart options={options4} />
-            </div>
-        );
-
-    }
-
-    const a = 10;
-
-
 }
 
-
-export default Graphs;
+export default Graphs4;
 // gradeVStudentPS() {
 
 //     let titleParam = "Student's Average Grade Over Time";
