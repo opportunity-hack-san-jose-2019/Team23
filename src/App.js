@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MyForm from './components/form';
-import Graphs from './components/graph4'
+import Graphs from './components/graphs4'
 import './App.css';
 
 const App = (props) => {
