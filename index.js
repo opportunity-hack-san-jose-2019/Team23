@@ -14,6 +14,7 @@ const TOKEN_PATH = 'token.json';
 //functions
 const classavg = require('./func/classavg');
 const classroom = require('./func/classroom');
+const grades = require('./func/grades');
 const listcourses = require('./func/listcourses');
 const mentor= require('./func/mentor');
 const score = require('./func/score');
@@ -32,8 +33,10 @@ fs.readFile('credentials.json', (err, content) => {
     if (err) return getNewToken(oAuth2Client);
     oAuth2Client.setCredentials(JSON.parse(token));
     
+    // grades.execute(oAuth2Client,'46904651667');
+    // classavg.execute(oAuth2Client, '46904651667', '46904651778')
     // listcourses.execute(oAuth2Client);
-    classroom.execute(oAuth2Client,'46904651667');
+    // classroom.execute(oAuth2Client,'46904651667');
     // mentor.execute(oAuth2Client,'46904651667');
     // students.execute(oAuth2Client, '46904651667');
     // score.execute(oAuth2Client,'46904651667','123');

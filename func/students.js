@@ -16,8 +16,14 @@ module.exports = {
         const courseinfo = classroom.courses.students.list({courseId:course})
             .then(function(result){
                 console.log("Students")
-                console.log(result.data)
-                return result.data;
+                allStudents = result.data.students
+                allData = []
+                allStudents.forEach(element => {
+                    element = element.profile.name.fullName
+                    allData.push(element)
+                });
+                console.log(JSON.stringify({"students": allData}))
+                return JSON.stringify({"students": allData});
             });
         
     }
