@@ -15,7 +15,7 @@ class Graphs4 extends Component {
 
     render() {
         const options = {
-            theme: "light",
+            theme: "dark2",
             title: {
                 text: "Average grade of the class over time"
             },
@@ -29,11 +29,11 @@ class Graphs4 extends Component {
                 type: "line",
 
                 dataPoints: [
-                    { label: 1, y: 10 },
-                    { label: 2, y: 15 },
-                    { label: 3, y: 25 },
-                    { label: 4, y: 30 },
-                    { label: 5, y: 28 }
+                    { label: 1, y: 90 },
+                    { label: 2, y: 85 },
+                    { label: 3, y: 85 },
+                    { label: 4, y: 90 },
+                    { label: 5, y: 85 }
                 ]
             }]
         }

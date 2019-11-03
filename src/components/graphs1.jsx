@@ -21,7 +21,7 @@ class Graphs1 extends Component {
                 text: "Grade of assignments"
             },
             data: [{
-                type: "column",
+                type: "line",
                 dataPoints: [
                     { label: "HW 1", y: 80 },
                     { label: "HW 2", y: 85 },
