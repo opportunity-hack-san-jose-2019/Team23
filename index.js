@@ -34,7 +34,7 @@ fs.readFile('credentials.json', (err, content) => {
     oAuth2Client.setCredentials(JSON.parse(token));
     
     // grades.execute(oAuth2Client,'46904651667', '107194452475327942169');
-    classavg.execute(oAuth2Client, '46904651667', '46904651778')
+    // classavg.execute(oAuth2Client, '46904651667', '46904651778')
     // listcourses.execute(oAuth2Client);
     // classroom.execute(oAuth2Client,'46904651667');
     // mentor.execute(oAuth2Client,'46904651667');

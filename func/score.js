@@ -14,10 +14,12 @@ module.exports = {
      */
     execute: function execute(auth, course, student){
         const classroom = google.classroom({version: 'v1', auth});
-        var allsubs = classroom.courses.courseWork.studentSubmissions.list(
-            {courseId: course},
-            {courseWorkId: student}
-        );
-        console.log(util.inspect(allsubs))
+        const allStud = classroom.courses.courseWork.studentSubmissions.list(
+            {courseId:course, courseWorkId:assignment}
+        ); 
+        Promise.all([allStud])
+        .then(function(result){ // pull all submissions into result
+            
+        })
     }
 }
