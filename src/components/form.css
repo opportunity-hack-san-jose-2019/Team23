@@ -1,0 +1,23 @@
+.form-header {
+    background-color: #ffffff;
+    /* min-height: 75px; */
+    font-size: 150%;
+    text-align: center;
+    /* margin: 25px, 50px, 75px, 100px; */
+  }
+
+.form-text {
+    text-align: center;
+    font-size: 150%;
+}
+.form-button {
+    font-size: 110%;
+	margin-top: 40px;
+	margin-left: 115px;
+}
+
+.form-bigBoi {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
