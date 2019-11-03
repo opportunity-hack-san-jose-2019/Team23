@@ -50,8 +50,11 @@ const MyForm = (props) => {
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
+    const values = [0, 0, 0, 0, 0]
+    
     const disabled = true;
     return (
+        
         <Form>
         
             <FormGroup>
@@ -63,6 +66,7 @@ const MyForm = (props) => {
                                     state.classroom.map((mclass, index) => {
                                         return (
                                             <option key={mclass.id}>{mclass.myClassName}</option>
+                                           
                                                     
                                         );
                                     })
@@ -91,7 +95,7 @@ const MyForm = (props) => {
                 </Row>
                 <Row>
                     <Col>
-                            <CustomInput type ="checkbox" id="5" label="All" onClick={( )=>{toggle()}}/>   
+                            <CustomInput type ="checkbox" id="5" label="All" onClick={( )=>{console.log("haha")}}/>   
                     </Col>
                 </Row>
             </FormGroup>
