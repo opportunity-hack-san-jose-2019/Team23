@@ -15,17 +15,25 @@ class Graphs4 extends Component {
 
     render() {
         const options = {
+            theme: "light",
             title: {
-                text: "Basic Column Chart in React"
+                text: "Average grade of the class over time"
+            },
+            axisX: {
+                title: "Assignment Number"
+            },
+            axisY: {
+                title: "Average Grade"
             },
             data: [{
-                type: "column",
+                type: "line",
+
                 dataPoints: [
-                    { label: "mane", y: 10 },
-                    { label: "nei thry", y: 15 },
-                    { label: "looordie", y: 25 },
-                    { label: "yes", y: 30 },
-                    { label: "ok", y: 28 }
+                    { label: 1, y: 10 },
+                    { label: 2, y: 15 },
+                    { label: 3, y: 25 },
+                    { label: 4, y: 30 },
+                    { label: 5, y: 28 }
                 ]
             }]
         }
