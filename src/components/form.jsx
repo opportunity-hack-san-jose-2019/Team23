@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Fade, Col, Row, Label, Container, FormGroup, Input, Form, CustomInput } from 'reactstrap';
 import './form.css';
+// import './func/getStructure';
 
 
 const MyForm = (props) => {
     let state = {
+        // classroom: fetch("getStructure.execute(")
         classroom: [
             {
                 id: 12312,
@@ -17,7 +19,29 @@ const MyForm = (props) => {
                         assignments: [
                             {
                                 assignmentName: "homework 1",
-                                assignmentGrade: "assignment grade"
+                                assignmentGrade: 94
+
+                            }
+                        ]
+                    },
+                    {
+                        student: "Billy Bob Joe",
+                        averageGrade: "50",
+                        assignments: [
+                            {
+                                assignmentName: "homework 1",
+                                assignmentGrade: 50
+
+                            }
+                        ]
+                    },
+                    {
+                        student: "John Bob Joe",
+                        averageGrade: "120",
+                        assignments: [
+                            {
+                                assignmentName: "homework 1",
+                                assignmentGrade: 120
 
                             }
                         ]
