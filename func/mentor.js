@@ -12,7 +12,7 @@ module.exports = {
      */
     execute: function execute(auth, course){
         const classroom = google.classroom({version: 'v1', auth});
-        const courseinfo = classroom.courses.teachers.list({courseId:course})
+        const teachers = classroom.courses.teachers.list({courseId:course})
             .then(function(result){
                 console.log("Teacher: ")
                 allTeachers = result.data.teachers;

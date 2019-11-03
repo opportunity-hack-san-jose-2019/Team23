@@ -13,7 +13,7 @@ module.exports = {
      */
     execute: function execute(auth, course){
         const classroom = google.classroom({version: 'v1', auth});
-        const courseinfo = classroom.courses.students.list({courseId:course})
+        const stud = classroom.courses.students.list({courseId:course})
             .then(function(result){
                 console.log("Students")
                 allStudents = result.data.students
@@ -25,7 +25,8 @@ module.exports = {
                 });
                 console.log(JSON.stringify({"students": allData}))
                 return JSON.stringify({"students": allData});
-            });
+            }
+        );
         
     }
 }

@@ -17,6 +17,7 @@ module.exports = {
             .then(function(result){
                 console.log("Classroom: ");
                 console.log(JSON.stringify({"classroom":result.data.name}));
+                console.log(util.inspect(result.data))
                 return JSON.stringify({"classroom":result.data.name});
             });
         
