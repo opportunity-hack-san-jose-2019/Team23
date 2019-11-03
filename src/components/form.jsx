@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Fade, Col, Row, Label, Container, FormGroup, Input, Form, CustomInput } from 'reactstrap';
+import Graphs4 from './graphs4'
+import Graphs3 from './graphs3'
+import Graphs2 from './graphs2'
+import Graphs1 from './graphs1'
 import './form.css';
 // import './func/getStructure';
 
@@ -108,6 +112,18 @@ const MyForm = (props) => {
                     </Col>
                 </FormGroup>
             </Form>
+            <div>
+                <Graphs1 />
+            </div>
+            <div>
+                <Graphs2 />
+            </div>
+            <div>
+                <Graphs3 />
+            </div>
+            <div>
+                <Graphs4 />
+            </div>
 
         </div>
     );
