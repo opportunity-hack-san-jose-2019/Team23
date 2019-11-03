@@ -83,7 +83,7 @@ const MyForm = (props) => {
                 </Row>
                 <Row>
                     <Col sm={6}>
-                        <CustomInput type ="checkbox" id="3" label="average grades vs classes (classrooms)" disabled= {disabled & toggle}/>
+                        <CustomInput type ="checkbox" id="3" label="average grades vs classes (classrooms)" />
                     </Col>
                     <Col sm={6}>
                         <CustomInput type ="checkbox" id="4" label="average grades of all classes"  />
