@@ -143,15 +143,15 @@ const MyForm = (props) => {
                 <FormGroup className="form-button">
                     <Col>
                         <Row sm={6}>
-                            <CustomInput type="checkbox" id="1" label="grade vs assignments (per student)" onClick={toggle1} />
+                            <CustomInput type="checkbox" id="1" label="students average grade per assignment" onClick={toggle1} />
                         </Row>
                         <Row sm={6}>
-                            <CustomInput type="checkbox" id="2" label="average grade vs assignment (classrooms)" onClick={toggle2} />
+                            <CustomInput type="checkbox" id="2" label="classroom average grade per assignment" onClick={toggle2} />
                         </Row>
                     </Col>
                     <Col>
                         <Row sm={6}>
-                            <CustomInput type="checkbox" id="3" label="average grades vs classes (classrooms)" onClick={toggle3} />
+                            <CustomInput type="checkbox" id="3" label="classroom average grades in each class" onClick={toggle3} />
                         </Row>
                         <Row sm={6}>
                             <CustomInput type="checkbox" id="4" label="average grades of all classes" onClick={toggle4} />
