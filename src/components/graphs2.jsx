@@ -8,22 +8,27 @@ let dataPoints = [];
 
 
 class Graphs2 extends Component {
-
-
-
     render() {
         const options = {
+            animationEnabled: true,
+            theme:"dark2",
+            axisY: {
+                title: "Score",
+            },
+            axisX: {
+                title: "Assignments",
+            },
             title: {
-                text: "Basic Column Chart in React"
+                text: "average grade of an assignment (classrooms)"
             },
             data: [{
                 type: "column",
                 dataPoints: [
-                    { label: "no link", y: 10 },
-                    { label: "i wish this worked", y: 15 },
-                    { label: "scik", y: 25 },
-                    { label: "ifwo", y: 30 },
-                    { label: "asdfasd", y: 28 }
+                    { label: "HW 1", y: 83 },
+                    { label: "HW 2", y: 85 },
+                    { label: "HW 3", y: 87 },
+                    { label: "HW 4", y: 91 },
+                    { label: "HW 5", y: 94 }
                 ]
             }]
         }
